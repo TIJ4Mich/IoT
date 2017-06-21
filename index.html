@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--Date: 22 june 2017 -->
+
+
+<html>
+<title>TIJ4 MICH</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("images/blacklight.jpg");
+    min-height: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;s
+}
+
+body {
+        text-align: center;
+      }
+
+      #g1, #g2, #g3, #g4, #g5, #g6, #g7, #g8, #g9 {
+        width:180px; height:150px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        margin: 1px;
+      }
+
+</style>
+<body>
+
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">TIJ4 MICH Chemical and Gas Monitoring</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">TIJ4 MICH Chemical and Gas Monitoring</span><br>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Drum & Cylinder Status</a></p>
+    <p><a href="#leak" class="w3-button w3-gray w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Leak Alarm</a></p>
+  </div> 
+  </header>
+
+<header class="w3-light-grey w3-content" id="about">
+  <h2 class="w3-center">ONLINE MONITORING</h2>
+
+</header>
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter w3-container">
+    <div id="g1">    </div>
+    </div>
+
+    <div class="w3-quarter w3-container">
+    <div id="g2">    </div>
+    </div>
+
+    <div class="w3-quarter w3-container">
+    <div id="g3">    </div>
+    </div>
+
+    <div class="w3-quarter w3-container">
+    <div id="g4">    </div>
+    </div>
+  </div>
+
+<div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter w3-container">
+    <div id="g5">    </div>
+    </div>
+
+    <div class="w3-quarter w3-container">
+    <div id="g6">    </div>
+    </div>
+
+    <div class="w3-quarter w3-container">
+    <div id="g7">    </div>
+    </div>
+
+    <div class="w3-quarter w3-container">
+    <div id="g8">    </div>
+    </div>
+  </div>
+
+<div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter w3-container">
+    <div id="g9">    </div>
+    </div>
+
+    <div class="w3-quarter w3-container">
+    <div id="g10">    </div>
+    </div>
+
+    <div class="w3-quarter w3-container">
+    <div id="g11">    </div>
+    </div>
+
+    <div class="w3-quarter w3-container">
+    <div id="g12">    </div>
+    </div>
+  </div>
+
+
+<script src="raphael-2.1.4.min.js"></script>
+    <script src="justgage.js"></script>
+    <script>
+      var g1, g2, g3, g4, g5, g6, g7, g8, g9;
+
+      window.onload = function(){
+        var g1 = new JustGage({
+          id: "g1",
+          value: getRandomInt(1000, 3500),
+          min: 0,
+          max: 3500,
+          title: "O2 Pallet Sys A",
+          label: "psi",
+          shadowOpacity: 5,
+          shadowSize: 5,
+          shadowVerticalOffset: 5,
+          levelColors: [
+          "#ff0000", //red
+          "#ffa500", //orange
+          "#008000", //green
+        ],
+        });
+
+        var g2 = new JustGage({
+          id: "g2",
+          value: getRandomInt(0, 3500),
+          min: 250,
+          max: 3500,
+          title: "O2 Pallet Sys B",
+          label: "psi",
+          shadowOpacity: 5,
+          shadowSize: 5,
+          shadowVerticalOffset: 5,
+          levelColors: [
+          "#ff0000", //red
+          "#ffa500", //orange
+          "#008000", //green
+        ],
+        });
+
+        var g3 = new JustGage({
+          id: "g3",
+          value: getRandomInt(3, 25),
+          min: 0,
+          max: 25,
+          title: "CO2 Cyl Sys A",
+          label: "kgs",
+          shadowOpacity: 5,
+          shadowSize: 5,
+          shadowVerticalOffset: 5,
+          levelColors: [
+          "#ff0000", //red
+          "#ffa500", //orange
+          "#008000", //green
+        ],
+        });
+
+        var g4 = new JustGage({
+          id: "g4",
+          value: getRandomInt(3, 25),
+          min: 0,
+          max: 25,
+          title: "CO2 Cyl Sys B",
+          label: "kgs",
+          shadowOpacity: 5,
+          shadowSize: 5,
+          shadowVerticalOffset: 5,
+           levelColors: [
+          "#ff0000", //red
+          "#ffa500", //orange
+          "#008000", //green
+        ],
+        });
+
+        var g5 = new JustGage({
+          id: "g5",
+          value: getRandomInt(2, 200),
+          min: 0,
+          max: 200,
+          title: "Slurry Drum E1",
+          label: "L",
+          shadowOpacity: 5,
+          shadowSize: 5,
+          shadowVerticalOffset: 5,
+           levelColors: [
+          "#ff0000", //red
+          "#ffa500", //orange
+          "#008000", //green
+        ],
+        });
+
+        var g6 = new JustGage({
+          id: "g6",
+          value: getRandomInt(2, 200),
+          min: 0,
+          max: 200,
+          title: "Slurry Drum E2",
+          label: "L",
+          shadowOpacity: 5,
+          shadowSize: 5,
+          shadowVerticalOffset: 5,
+           levelColors: [
+          "#ff0000", //red
+          "#ffa500", //orange
+          "#008000", //green
+        ],
+        });
+
+        var g7 = new JustGage({
+          id: "g7",
+          value: getRandomInt(2, 200),
+          min: 0,
+          max: 200,
+          title: "TMA Drum",
+          label: "L",
+          shadowOpacity: 5,
+          shadowSize: 5,
+          shadowVerticalOffset: 5,
+           levelColors: [
+          "#ff0000", //red
+          "#ffa500", //orange
+          "#008000", //green
+        ],
+        });
+
+        var g8 = new JustGage({
+          id: "g8",
+          value: getRandomInt(2, 200),
+          min: 0,
+          max: 200,
+          title: "EL Drum",
+          label: "L",
+          shadowOpacity: 5,
+          shadowSize: 5,
+          shadowVerticalOffset: 5,
+           levelColors: [
+          "#ff0000", //red
+          "#ffa500", //orange
+          "#008000", //green
+        ],
+        });
+
+        var g9 = new JustGage({
+          id: "g9",
+          value: getRandomInt(2, 200),
+          min: 0,
+          max: 200,
+          title: "Sulfuric Drum",
+          label: "L",
+          shadowOpacity: 5,
+          shadowSize: 5,
+          shadowVerticalOffset: 5,
+           levelColors: [
+          "#ff0000", //red
+          "#ffa500", //orange
+          "#008000", //green
+        ],
+        });
+
+        setInterval(function() {
+          g1.refresh(getRandomInt(250, 3500));
+          g2.refresh(getRandomInt(250, 3500));
+          g3.refresh(getRandomInt(3, 25));
+          g4.refresh(getRandomInt(3, 25));
+          g5.refresh(getRandomInt(3, 200));
+          g6.refresh(getRandomInt(3, 200));
+          g7.refresh(getRandomInt(3, 200));
+          g8.refresh(getRandomInt(3, 200));
+          g9.refresh(getRandomInt(3, 200));
+
+        }, 2500);
+      };
+    </script>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-24">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <p>Powered by <a href="TIJ4.asp" title="bryan.plenos@hp.com" target="_blank" class="w3-hover-text-green">TIJ4 TS</a></p>
+</footer>
+ 
+</body>
+</html>
